@@ -51,11 +51,12 @@ public class TinyHealth {
                     float health = player.getHealth();
                     float maxHealth = player.getMaxHealth();
                     // 格式化字符串
-                    String healthString = String.format("❤:%.0f/%.0f", health, maxHealth);
+                    String healthString = String.format("%.0f/%.0f", health, maxHealth);
                     // 获取字体
                     Font font = gui.getFont();
                     // 绘制字符串，你可以根据你的喜好调整坐标和颜色
-                    guiGraphics.drawString(font, healthString, left, top, 0xFFFF00);
+                    guiGraphics.drawString(font, "❤", left, top, 0xFF0000);
+                    guiGraphics.drawString(font, healthString, left + 10, top, 0xFFFF00);
                 }
             });
             // 注册这个HUD元素，你可以根据你的喜好调整位置和ID
